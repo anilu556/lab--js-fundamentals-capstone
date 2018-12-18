@@ -12,15 +12,17 @@
  // ++ YOUR CODE HERE
 
 function toCamelCase(string){
+  //formar array de palabras del string
   var words = string.split(" ");
-
-    for ( i =0; i < words.length; i++){
-
-      var wordUpper = words[0].toUpperCase();
-      var wordLower = words.slice(1).toLowerCase();
-     result[i] = wordUpper + wordLower;
+    //iterar sobre el array
+    for ( i =1; i < words.length; i++){
+    //cada palabra convertirla en minúscula
+      words[i] = words[i].toLowerCase();
+    //reemplazar primera letra de palabara por mayúscula -replace-
+      words[i] = words[i].replace(words[i], words[i][0].toUpperCase()) + words[i].slice(1);
     }
-    return result.join("");
+    // retornar string de palabras en camelcase -unir palabras del array
+    return words.join("");
 }
 
 

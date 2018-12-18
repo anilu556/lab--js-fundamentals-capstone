@@ -23,29 +23,27 @@
 
 // ++ YOUR CODE HERE
 
-function encodeUrl(string){
-  var words =string.split(" ");
-  var result = [ ];
-  for ( i = 0; i < words.length; i++){
-    var letter = words[i];
-    if (letter === ' '){
-      result.push("%20")
-    } else if(letter === "!"){
-      result.push("21%")
-    } else if(letter === ""){
-      result.push("21%")
-    } else if (letter === "$"){
-      result.push("24%")
-    } else if (letter === "%"){
-      result.push("%25")
-    } else if (letter === ""){
-      result.push ("%27")
-    } else {
-      result.push (letter)
+function encodeUrl(string) {
+
+  var newString = string.split("");
+    for (var i = 0; i < newString.length; i++) {
+
+    if (newString[i] === " ") {
+      newString[i] = "%20";
+    } else if (newString[i] === "!") {
+      newString[i] = "%21";
+    } else if (newString[i] === '"') {
+      newString[i] = "%22";
+    } else if (newString[i] === "$") {
+      newString[i] = "%24";
+    } else if (newString[i] === "%") {
+      newString[i] = "%25";
+    } else if (newString[i] === "'") {
+      newString[i] = "%27";
     }
   }
-    var url = result.join("");
-    return url;
+
+  return newString.join("");
 }
 
 

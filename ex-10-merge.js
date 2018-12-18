@@ -12,16 +12,16 @@
 
 
 // ++ YOUR CODE HERE
-
-
-
-
-
-
-
-
-
-
+function merge(objOne, objTwo) {
+  var merged = {};
+  for (var property in objOne) {
+      merged[property] = objOne[property];
+  }
+  for (var property in objTwo) {
+      merged[property] = objTwo[property];
+  }
+  return merged;
+}
 // *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 // *~*~*~*~*~*~*~* Tests (Don't Touch) *~*~*~*~*~*~*~*~*
 // *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
